@@ -40,8 +40,27 @@ class JBuilder():
           sh.zip( "-r", f"{extension}.zip", f"{extension}" )
           sh.mv( f"{self.basePath}/{srcDir}/{extension}.zip", f"{self.buildsDir}"  )
           print(f"Built {extension} as {extension}.zip, you can find it in the ./builds folder.")
+  # Create and clean build dir
+  def createBuildsFolder(self):
+    if ( not os.path.exists(self.buildsDir) ):
+      sh.mkdir("-p", self.buildsDir)
+      os.chdir( self.buildsDir )
+      print( f"{os.getcwd()} now exists and is ready!" )
+      print(f"{self.lineSepThick}\n\n")
+    else:
+      os.chdir( self.buildsDir )
+      thisDir = os.getcwd()
+      for files in os.listdir( thisDir ):
+        path = os.path.join( thisDir, files )
+        try:
+            shutil.rmtree( path )
+        except OSError:
+            os.remove( path )
+      print( f"{os.getcwd()} now cleaned and is ready!" )
+      print(f"{self.lineSepThick}\n\n")
 
   def execute(self):
+    self.createBuildsFolder()
     self.packageDirsInSrcDirs()
 
 JB = JBuilder()
