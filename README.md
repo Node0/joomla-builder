@@ -35,8 +35,10 @@ builds/
 
 **Note:** If you are not fluent with the creation of Joomla extensions like components and plugins, have a look at my other repository which generates absolute minimalist, ready to install (folders and zip artifacts), and customizable (via CLI arguments) components and plugins. That repository is: [joomla-tools](https://github.com/Node0/joomla-tools) `https://github.com/Node0/joomla-tools`  
 <br>
-You may then move the generated folder of the component or plugin (if you use joomla-tools to create it) into your project folder (as prepared using these instructions).  
-At that point you are all set to freely develop your extension, and execute `./jBuilder.py` everytime you would like to do a test install iteration.
+You may then move the generated folder of the component or plugin (if you use joomla-tools to create it) into your project folder  
+**_(as prepared using these instructions)_**.
+<br>  
+At that point you are all set to freely develop your extension, and execute `./jBuilder.py` every time you would like to do a test install iteration.
 <br><br>
 **Note 2:**
 *You'll want to stage->commit->push etc your changes as you go according to git best practices.*
