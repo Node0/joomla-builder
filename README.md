@@ -5,11 +5,11 @@ An example repository equipped with a Joomla extension builder script for easy i
 1. **Create your own project repository first!!! Make sure it is BLANK**
 2. Git clone the master/main branch of this `joomla-builder` repository
 3. Select and copy from `joomla-builder` repo (to the root of your blank project repo) the following folders:
-	4. **joomla-builder**
-	5. **components**
-	6. **plugins**
-	7. **libraries**
-	8. **modules**
+	* **joomla-builder**
+	* **components**
+	* **plugins**
+	* **libraries**
+	* **modules**
 4. Append the following text snippet *into* your project repository's `.gitignore` file:
 <br>
 
